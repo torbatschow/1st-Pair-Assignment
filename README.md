@@ -1,6 +1,7 @@
 # 1st Pair Assignment by Alex & Torben
 ## Overview
 This is the repository to solve the first assignment in the [HertieDataScience](https://github.com/HertieDataScience) course of the fall semester 2016. It is authored by [Alex](https://github.com/corrod3) and [Torben](https://github.com/torbatschow).
+
 Feedback, ideas and comments are highly appreciated. 
 
 ##Problem to Solve
