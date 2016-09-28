@@ -1,1 +1,2 @@
-# 1st-Pair-Assignment
+# 1st Pair Assignment by Alex & Torben
+This is the repository for the first assignment in the [HertieDataScience](https://github.com/HertieDataScience) course of the fall semester 2016. It is authored by [Torben](https://github.com/torbatschow) and [Alex](https://github.com/corrod3).
