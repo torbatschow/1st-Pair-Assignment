@@ -7,7 +7,7 @@
 #Clear Global environment
 rm(list=ls())
 
-#Load packages/library
+#Collect packages/libraries we need:
 # RCurl is needed to access https from github, see http://stackoverflow.com/questions/14441729/read-a-csv-from-github-into-r
 packages <- c("RCurl")
 
