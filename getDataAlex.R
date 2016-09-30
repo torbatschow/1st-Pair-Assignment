@@ -6,7 +6,7 @@
 ###########
 
 #Load packages/library
-
+# RCurl is needed to access https from github, see http://stackoverflow.com/questions/14441729/read-a-csv-from-github-into-r
 packages <- c("RCurl")
 
 #install packages if not installed before
@@ -14,10 +14,10 @@ for (p in packages) {
   if (p %in% installed.packages()[,1]) require(p, character.only=T)
   else {
     install.packages(p)
-    require(p, character.only=T)
   }
+  require(p, character.only=T)
 }
-library(RCurl) #needed to access https from github, see http://stackoverflow.com/questions/14441729/read-a-csv-from-github-into-r
+
 
 #Set Working Directory
 try(setwd("/home/torben/GIT/1st-Pair-Assignment"), silent = TRUE)
