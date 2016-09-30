@@ -8,8 +8,11 @@
 #Load packages
 
 #Set Working Directory
+try(setwd("D:\Eigene Datein\Dokumente\Uni\Hertie\Materials\Collaborative Social Science Data Analysis\1st-Pair-Assignment"), silent = TRUE)
+try(setwd("C:/Users/Lisa/Documents/GitHub/CSSR_FinalProject"), silent = TRUE)
 
 #Get Data
+#link: https://github.com/fivethirtyeight/data
 
 #Clean Data
 
