@@ -31,6 +31,7 @@ try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social 
 policeKillingRaw <- getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/police-killings/police_killings.csv")
 policeKilling <- read.csv(text = policeKillingRaw)
 
+#weatherrecords (Charlotte, NC)
 weatherRaw <- getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/us-weather-history/KCLT.csv")
 weather <- read.csv(text = weatherRaw)
 
