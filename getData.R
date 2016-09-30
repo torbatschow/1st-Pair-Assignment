@@ -4,6 +4,9 @@
 # Updated September 30, 2016
 ###########
 
+#Clear Global environment
+rm(list=ls())
+
 #Load packages/library
 # RCurl is needed to access https from github, see http://stackoverflow.com/questions/14441729/read-a-csv-from-github-into-r
 packages <- c("RCurl")
@@ -28,7 +31,12 @@ try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social 
 trumpTwitterRaw <- getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/trump-twitter/realDonaldTrump_poll_tweets.csv")
 trumpTwitter <- read.csv(text = trumpTwitterRaw)
 
+weatherRaw <- getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/us-weather-history/KCLT.csv")
+weather <- read.csv(text = weatherRaw)
+
 #Clean Data
+
+
 
 
 
