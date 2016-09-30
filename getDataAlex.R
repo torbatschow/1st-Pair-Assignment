@@ -9,8 +9,8 @@
 library(RCurl) #needed to access https from github, see http://stackoverflow.com/questions/14441729/read-a-csv-from-github-into-r
 
 #Set Working Directory
+try(setwd("/home/torben/GIT/1st-Pair-Assignment"), silent = TRUE)
 try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social Science Data Analysis/1st-Pair-Assignment"), silent = TRUE)
-try(setwd("C:/Users/Lisa/Documents/GitHub/CSSR_FinalProject"), silent = TRUE)
 
 #Get Data
 #Source: https://github.com/fivethirtyeight/data

@@ -1,5 +1,5 @@
 ---
-title: "Assignment1"
+title: "Assignment 1"
 author: "Alex Sacharow & Torben Klausa"
 date: "September 30, 2016"
 output: pdf_document
@@ -8,8 +8,18 @@ output: pdf_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+```{r, include = FALSE}
+try(setwd("/home/torben/GIT/1st-Pair-Assignment"), silent = TRUE)
+try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social Science Data Analysis/1st-Pair-Assignment"), silent = TRUE)
+```
+
 
 ## R Markdown
+
+This is the current working directory:
+```{r, echo=FALSE}
+getwd()
+```
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
