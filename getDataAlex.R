@@ -13,10 +13,10 @@ try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social 
 try(setwd("C:/Users/Lisa/Documents/GitHub/CSSR_FinalProject"), silent = TRUE)
 
 #Get Data
+#Source: https://github.com/fivethirtyeight/data
 
-x <- getURL("https://raw.github.com/aronlindberg/latent_growth_classes/master/LGC_data.csv")
-y <- read.csv(text = x)
-#link: https://github.com/fivethirtyeight/data
+trumpTwitterRaw <- getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/trump-twitter/realDonaldTrump_poll_tweets.csv")
+trumpTwitter <- read.csv(text = x)
 
 #Clean Data
 
