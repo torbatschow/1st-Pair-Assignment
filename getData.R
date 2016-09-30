@@ -28,8 +28,8 @@ try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social 
 #Get Data
 #Source: https://github.com/fivethirtyeight/data
 
-trumpTwitterRaw <- getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/trump-twitter/realDonaldTrump_poll_tweets.csv")
-trumpTwitter <- read.csv(text = trumpTwitterRaw)
+policeKillingRaw <- getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/police-killings/police_killings.csv")
+policeKilling <- read.csv(text = policeKillingRaw)
 
 weatherRaw <- getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/us-weather-history/KCLT.csv")
 weather <- read.csv(text = weatherRaw)
