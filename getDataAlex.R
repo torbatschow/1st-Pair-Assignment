@@ -5,7 +5,18 @@
 # Formatted according to Google style guide
 ###########
 
-#Load packages
+#Load packages/library
+
+packages <- c("RCurl")
+
+#install packages if not installed before
+for (p in packages) {
+  if (p %in% installed.packages()[,1]) require(p, character.only=T)
+  else {
+    install.packages(p)
+    require(p, character.only=T)
+  }
+}
 library(RCurl) #needed to access https from github, see http://stackoverflow.com/questions/14441729/read-a-csv-from-github-into-r
 
 #Set Working Directory
@@ -16,11 +27,9 @@ try(setwd("C:/Users/Lisa/Documents/GitHub/CSSR_FinalProject"), silent = TRUE)
 #Source: https://github.com/fivethirtyeight/data
 
 trumpTwitterRaw <- getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/trump-twitter/realDonaldTrump_poll_tweets.csv")
-trumpTwitter <- read.csv(text = x)
+trumpTwitter <- read.csv(text = trumpTwitterRaw)
 
 #Clean Data
 
-#hallo mama
 
-#Hallo Papa, sagt auch Torben!
 
