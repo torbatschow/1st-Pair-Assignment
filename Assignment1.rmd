@@ -1,7 +1,7 @@
 ---
 title: "Assignment 1"
 author: "Alex Sacharow & Torben Klausa"
-date: "September 30, 2016"
+date: "October 07, 2016"
 output: 
   pdf_document:
     toc: true
@@ -13,21 +13,30 @@ bibliography: bibliography.bib
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 ```{r, include = FALSE}
+## Setting Working directory
 try(setwd("/home/torben/GIT/1st-Pair-Assignment"), silent = TRUE)
 try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social Science Data Analysis/1st-Pair-Assignment"), silent = TRUE)
 ```
 
 
-# R Markdown
+# Introduction
 
-This is the current working directory:[^footnote1]
+In this assignment we draw two data sets from the GitHub repository [fivethirtyeight](https://github.com/fivethirtyeight) and apply some descriptive statistics on them.[^footnote1] If you have set this file up correctly your working directory should appear here:
+
+
 ```{r show working directory, echo=FALSE}
 getwd()
 ```
 
-```{r}
+# Data set 1: Police Killings
+
+The first data set we choose is about police killings in the US which was gathered by the Guardian. Information on the structure of the raw data set can be accessed on [GitHub: fivethirtyeight](https://github.com/fivethirtyeight/data/tree/master/police-killings). FiveThirtyEight wrote themselves about it on their [website](http://fivethirtyeight.com/features/where-police-have-killed-americans-in-2015/) and the corresponding Guardian story is available on [The counted](https://www.theguardian.com/us-news/ng-interactive/2015/jun/01/the-counted-police-killings-us-database). What fallows are our own descriptive statistics of the data set.
+
+```{r, echo=FALSE}
 source("getData.R")
+source("stats+Graphics.R")
 ```
 
 
@@ -54,6 +63,6 @@ hist(weather[,2])
 ```
 
 
-[^footnote1]: See @Acemoglu2000 [33-40].
+[^footnote1]: This is a test footnote. See @Acemoglu2000 [33-40].
 
 # References
