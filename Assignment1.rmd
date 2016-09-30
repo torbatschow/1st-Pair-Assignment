@@ -6,8 +6,7 @@ output:
   pdf_document:
     toc: true
     number_sections: true
-bibliography:
-    - bibliography.bib
+bibliography: bibliography.bib
 ---
 
 ```{r setup, include=FALSE}
@@ -46,6 +45,6 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-[^footnote1]: See [@Acemoglu2000].
+[^footnote1]: See @Acemoglu2000 [33-40].
 
 # References
