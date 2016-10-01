@@ -30,6 +30,7 @@ try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social 
 #Get Data
 #Source: https://github.com/fivethirtyeight/data
 ########################
+#Police killings
 policeKilling <- read.csv(text = getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/police-killings/police_killings.csv"))
 
 #US births 2000 - 2014
