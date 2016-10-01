@@ -19,20 +19,28 @@ for (p in packages) {
   }
   require(p, character.only=T)
 }
-
+library(RCurl)
+library(bitops)
 
 #Set Working Directory
 try(setwd("/home/torben/GIT/1st-Pair-Assignment"), silent = TRUE)
 try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social Science Data Analysis/1st-Pair-Assignment"), silent = TRUE)
 
+#######################
 #Get Data
 #Source: https://github.com/fivethirtyeight/data
+########################
 policeKilling <- read.csv(text = getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/police-killings/police_killings.csv"))
 
 #US births 2000 - 2014
 births <- read.csv(text = getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/births/US_births_2000-2014_SSA.csv"))
 
+#######################
 #Clean Data
+######################
+
+#for the assignment we need only a few entries of the dataset. We will select them here and assign them to a separate variable.
+
 
 
 
