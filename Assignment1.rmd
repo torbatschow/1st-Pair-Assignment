@@ -30,37 +30,21 @@ In this assignment we draw two data sets from the GitHub repository [fivethirtye
 getwd()
 ```
 
-# Data set 1: Police Killings
+# First data set: Police Killings
 
 The first data set we choose is about police killings in the US which was gathered by the Guardian. Information on the structure of the raw data set can be accessed on [GitHub: fivethirtyeight](https://github.com/fivethirtyeight/data/tree/master/police-killings). FiveThirtyEight wrote themselves about it on their [website](http://fivethirtyeight.com/features/where-police-have-killed-americans-in-2015/) and the corresponding Guardian story is available on [The counted](https://www.theguardian.com/us-news/ng-interactive/2015/jun/01/the-counted-police-killings-us-database). What fallows are our own descriptive statistics of the data set.
 
-```{r, echo=FALSE}
+```{r data, cache=FALSE, include=FALSE}
 source("getData.R")
-source("stats+Graphics.R")
+#source("stats+Graphics.R")
 ```
 
+## Basic one variable descriptive statistics
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+To begin we will just plot a few basic descriptives using R internal functions. 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
-```
-
-# Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-```{r}
-hist(weather[,2])
-```
+# Second data set
 
 
 [^footnote1]: This is a test footnote. See @Acemoglu2000 [33-40].
