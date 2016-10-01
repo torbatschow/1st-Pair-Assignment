@@ -19,8 +19,8 @@ for (p in packages) {
   }
   require(p, character.only=T)
 }
-library(RCurl)
-library(bitops)
+library(RCurl) # @Alex: Why do we again list this here after we have already loaded it?
+library(bitops) # @Alex: Why don't we include it in the "packages" list above?
 
 #Set Working Directory
 try(setwd("/home/torben/GIT/1st-Pair-Assignment"), silent = TRUE)
