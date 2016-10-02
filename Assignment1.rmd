@@ -9,15 +9,21 @@ output:
 bibliography: bibliography.bib
 ---
 
-```{r setup, include=FALSE}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-```{r, include = FALSE}
+```{r, include = FALSE, ECHO = FALSE}
 ## Setting Working directory
 try(setwd("/home/torben/GIT/1st-Pair-Assignment"), silent = TRUE)
 try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social Science Data Analysis/1st-Pair-Assignment"), silent = TRUE)
+```
+
+```{r, include = FALSE}
+#Including the other R scripts
+source("getData.R")
+source("stats+Graphics.R")
 ```
 
 
@@ -26,18 +32,34 @@ try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social 
 In this assignment we draw two data sets from the GitHub repository [fivethirtyeight](https://github.com/fivethirtyeight) and apply some descriptive statistics on them.[^footnote1] If you have set this file up correctly your working directory should appear here:
 
 
-```{r show working directory, echo=FALSE}
+```{r show working directory, echo = FALSE}
 getwd()
 ```
 
-# Data set 1: Police Killings
+# Data Set 1: Police Killings
 
 The first data set we choose is about police killings in the US which was gathered by the Guardian. Information on the structure of the raw data set can be accessed on [GitHub: fivethirtyeight](https://github.com/fivethirtyeight/data/tree/master/police-killings). FiveThirtyEight wrote themselves about it on their [website](http://fivethirtyeight.com/features/where-police-have-killed-americans-in-2015/) and the corresponding Guardian story is available on [The counted](https://www.theguardian.com/us-news/ng-interactive/2015/jun/01/the-counted-police-killings-us-database). What fallows are our own descriptive statistics of the data set.
 
-```{r, echo=FALSE}
-source("getData.R")
-source("stats+Graphics.R")
+# Data Set 2: US Birth Statistics
+
+This is boxplot 1:
+
+```{r plot1, echo=FALSE}
+boxplot(births$births~births$month, col=topo.colors(12), xlab = "Month", ylab = "Births")
 ```
+
+This is No 2:
+
+```{r plot2, echo=FALSE}
+boxplot(births$births~births$day_of_week, col=topo.colors(7), xlab = "Day of Week", ylab = "Births")
+```
+
+Here comes the heatmap:
+
+```{r heatmap, echo=FALSE}
+heatmap.2(mat, main = "Births on Weekdays per Month", density.info = "none", trace = "none", dendrogram = "none", Rowv = NA, Colv = NA)
+```
+
 
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
@@ -58,9 +80,6 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-```{r}
-hist(weather[,2])
-```
 
 
 [^footnote1]: This is a test footnote. See @Acemoglu2000 [33-40].

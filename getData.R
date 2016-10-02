@@ -9,7 +9,7 @@ rm(list=ls())
 
 #Collect packages/libraries we need:
 # RCurl is needed to access https from github, see http://stackoverflow.com/questions/14441729/read-a-csv-from-github-into-r
-packages <- c("RCurl")
+packages <- c("RCurl", "gplots", "RColorBrewer")
 
 #install packages if not installed before
 for (p in packages) {
