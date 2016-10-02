@@ -34,11 +34,35 @@ try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social 
 policeKilling <- read.csv(text = getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/police-killings/police_killings.csv"))
 
 #US births 2000 - 2014
+#Dataset from: https://github.com/fivethirtyeight/data/tree/master/births
 births <- read.csv(text = getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/births/US_births_2000-2014_SSA.csv"))
 
 #######################
 #Clean Data
 ######################
+
+#######################
+#US births 2000 - 2014
+#######################
+
+#Generate lists with days of week and months
+l_days_of_week <- c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+l_months <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+#Re-label births variables and make them factors
+births$day_of_week <- factor(births$day_of_week, levels = c(1, 2, 3, 4, 5, 6, 7), labels = l_days_of_week)
+births$month <- factor(births$month, levels = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), labels = l_months)
+
+#Generate matrix with births on specific days of week and specific months (Matrix is needed for heatmap.)
+mat = matrix(nrow = 12, ncol = 7)
+rownames(mat) <- l_months
+colnames(mat) <- l_days_of_week
+for (m in l_months) {
+  for (wd in l_days_of_week) {
+    mat[m, wd] <- Reduce("+", births[(births$month == m) & (births$day_of_week == wd), 5])
+  }
+}
+
 
 #for the assignment we need only a few entries of the dataset. We will select them here and assign them to a separate variable.
 
