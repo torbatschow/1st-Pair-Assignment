@@ -4,6 +4,7 @@ This is the repository to solve the first assignment in the [MPP-E1180: Introduc
 
 ## Structure of the Repository
 The assignment is be managed in a folder. It contains R scripts for getting and cleaning the data ([getData.R](https://github.com/torbatschow/1st-Pair-Assignment/blob/master/getData.R)) and a separate rmd script to analyse/present the data ([Assignment1.rmd](https://github.com/torbatschow/1st-Pair-Assignment/blob/master/Assignment1.rmd)).
+The [pdf version of the final document](https://github.com/torbatschow/1st-Pair-Assignment/blob/master/Assignment1.pdf) in this repository should be treated with care as it might not contain the latest changes made in the scripts.
 
 ## Problem to Solve
 The [first assignment](https://github.com/HertieDataScience/SyllabusAndLectures/blob/master/README.md) reads as follows:
