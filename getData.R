@@ -50,8 +50,8 @@ l_days_of_week <- c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
 l_months <- c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
 
 #Re-label births variables and make them factors
-births$day_of_week <- factor(births$day_of_week, levels = c(1, 2, 3, 4, 5, 6, 7), labels = l_days_of_week)
-births$month <- factor(births$month, levels = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), labels = l_months)
+births$day_of_week <- factor(births$day_of_week, levels = 1:7, labels = l_days_of_week)
+births$month <- factor(births$month, levels = 1:12, labels = l_months)
 
 #Generate matrix with births on specific days of week and specific months (Matrix is needed for heatmap.)
 mat = matrix(nrow = 12, ncol = 7)
