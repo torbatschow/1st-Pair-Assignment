@@ -8,8 +8,7 @@
 rm(list=ls())
 
 #Collect packages/libraries we need:
-# RCurl is needed to access https from github, see http://stackoverflow.com/questions/14441729/read-a-csv-from-github-into-r
-packages <- c("RCurl", "gplots", "RColorBrewer")
+packages <- c("RCurl", "gplots", "RColorBrewer", "bitops")
 
 #install packages if not installed before
 for (p in packages) {
@@ -19,8 +18,8 @@ for (p in packages) {
   }
   require(p, character.only=T)
 }
-library(RCurl) # @Alex: Why do we again list this here after we have already loaded it?
-library(bitops) # @Alex: Why don't we include it in the "packages" list above?
+
+
 
 #Set Working Directory
 try(setwd("/home/torben/GIT/1st-Pair-Assignment"), silent = TRUE)
@@ -62,9 +61,6 @@ for (m in l_months) {
     mat[m, wd] <- Reduce("+", births[(births$month == m) & (births$day_of_week == wd), 5])
   }
 }
-
-
-#for the assignment we need only a few entries of the dataset. We will select them here and assign them to a separate variable.
 
 
 
