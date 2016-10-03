@@ -3,7 +3,7 @@
 This is the repository to solve the first assignment in the [MPP-E1180: Introduction to Collaborative Social Science Data Analysis](https://github.com/HertieDataScience) course of the fall semester 2016. It is authored by [Alex](https://github.com/corrod3) and [Torben](https://github.com/torbatschow). Any feedback, comments, and ideas are highly appreciated. Please send them to <a href="mailto:t.klausa@mpp.hertie-school.org">Torben</a> or <a href="mailto:a.sacharow@mpp.hertie-school.org">Alex</a> or submit a pull request.
 
 ## Structure of the Repository
-The repository contains R scripts for getting and cleaning the data ([getData.R](https://github.com/torbatschow/1st-Pair-Assignment/blob/master/getData.R)), a script for the plots [stats+Graphics.R](https://github.com/torbatschow/1st-Pair-Assignment/blob/master/stats%2BGraphics.R) and a separate rmd script to analyse/present the data ([Assignment1.rmd](https://github.com/torbatschow/1st-Pair-Assignment/blob/master/Assignment1.rmd)).
+The repository contains R scripts for getting and cleaning the data ([getData.R](https://github.com/torbatschow/1st-Pair-Assignment/blob/master/getData.R)), a script for the plots ([stats+Graphics.R](https://github.com/torbatschow/1st-Pair-Assignment/blob/master/stats%2BGraphics.R)) and a separate rmd script to analyse/present the data ([Assignment1.rmd](https://github.com/torbatschow/1st-Pair-Assignment/blob/master/Assignment1.rmd)).
 The [pdf version of the final document](https://github.com/torbatschow/1st-Pair-Assignment/blob/master/Assignment1.pdf) in this repository should be treated with care as it might not contain the latest changes made in the scripts.
 
 ## Problem to Solve
