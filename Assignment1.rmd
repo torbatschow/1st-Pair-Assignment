@@ -83,8 +83,6 @@ However, we see some differences between the months, hinting to the fact that ma
 
 ```{r plot1, echo=FALSE}
 boxplot(births$births~births$month, col=topo.colors(12), xlab = "Month", ylab = "Births", las = 2)
-#axis(side = 2, at = seq(8000, 18000, 4000), lwd = 1)
-#axis(3, at = births$births, labels = births$births, col.axis = "black", las = 2)
 ```
 
 ## Births on Single Days of the Week
