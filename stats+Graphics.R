@@ -3,25 +3,6 @@
 # Torben and Alexander
 # Updated September 30, 2016
 ###########
-
-#####################
-# Preparations
-#####################
-packages <- c("plyr", "ggplot2", "vcd")
-
-#install packages if not installed before
-for (p in packages) {
-  if (p %in% installed.packages()[,1]) require(p, character.only=T)
-  else {
-    install.packages(p)
-  }
-  require(p, character.only=T)
-}
-
-library(plyr) #basic functions like count
-library(ggplot2) #package for graphs
-library(vcd) # for mosaic chart
-
 #####################
 # Data presentation
 #####################

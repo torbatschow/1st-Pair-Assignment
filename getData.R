@@ -4,23 +4,6 @@
 # Updated September 30, 2016
 ###########
 
-#Clear Global environment
-rm(list=ls())
-
-#Collect packages/libraries we need:
-packages <- c("RCurl", "gplots", "RColorBrewer", "bitops")
-
-#install packages if not installed before
-for (p in packages) {
-  if (p %in% installed.packages()[,1]) require(p, character.only=T)
-  else {
-    install.packages(p, dependencies = TRUE)
-  }
-  require(p, character.only=T)
-}
-
-
-
 #Set Working Directory
 try(setwd("/home/torben/GIT/1st-Pair-Assignment"), silent = TRUE)
 try(setwd("D:/Eigene Datein/Dokumente/Uni/Hertie/Materials/Collaborative Social Science Data Analysis/1st-Pair-Assignment"), silent = TRUE)
