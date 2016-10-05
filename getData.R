@@ -20,11 +20,18 @@ policeKilling <- read.csv(text = getURL("https://raw.githubusercontent.com/fivet
 births <- read.csv(text = getURL("https://raw.githubusercontent.com/fivethirtyeight/data/master/births/US_births_2000-2014_SSA.csv"))
 
 #######################
-#Clean Data
+#Data Preparation: Police Killing
 ######################
 
+#list of factors
+cause.level <- levels(policeKilling$cause)
+#count the causes
+cause.count <- count(policeKilling, "cause")[,2]
+#put them together in a df
+cause.df <- data.frame(cause.level, cause.count)
+
 #######################
-#US births 2000 - 2014
+#Data Preparation US births 2000 - 2014
 #######################
 
 #Generate lists with days of week and months

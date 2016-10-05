@@ -23,12 +23,6 @@ barplot(cause.tab, main="Number of death by cause",
         xlab="Cause")
 
 
-# Bar plot with ggplot2 (good intro: http://www.sthda.com/english/wiki/ggplot2-barplots-quick-start-guide-r-software-and-data-visualization)
-cause.bar2 <- ggplot(data=cause.df, aes(x=cause.level, y=cause.count)) + 
-  geom_bar(stat="identity", fill="steelblue") +
-  theme_minimal() +
-  labs(title="Number of killed by cause", 
-       x="Cause", y = "Number")
 
 
 
